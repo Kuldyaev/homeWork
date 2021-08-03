@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Задание1Урок1</title>
+	<style>
+		*{margin:0; padding:0;}}
+		body, hStml {width: 100%; height:90%;}
+		.main {max-width: 750px; margin: 5% auto;}
+		form {display: flex; flex-direction: column; justify-content: space-between; align-items: center; height: 100px; margin-top: 15px;}
+
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		function alertShow(formValue){
+			var message = " ";
+			if(formValue < -237.15){
+				message = "Введенное значение меньше 'абсолютного ноля', укажите значение больше -237.15 ";
+			}else if(formValue > 5526){
+				message ="Введенное значение больше темперратуры поверхности Солнца, укажите значение меньеш 5526 "	
+			}else{
+				var tempF = (9/5)*formValue + 32;
+				message = "Результат:  " + formValue + " градусов по Цельсию равно "+ tempF.toFixed(2) + " градусам по Фаренгейту" ;
+			}
+			alert(message);
+		}
+	</script>
+	<div class="main">
+		<h3>Задание 1 к уроку №1 курса JavaScript от GeekBrains</h3>
+		</br>
+		<h5>Пожалуйста, введите значение темепературы в градусах Цельсия</h5>
+		<form onclick=" alertShow(formValue.value) ">
+			<input autofocus type="number" name="temperature" id="formValue">
+			<input type="submit" name="submitBtn" value="Получть значение в градусах Фаренгейт">
+		</form>
+
+	</div>	
+</body>
+</html>
