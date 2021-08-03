@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Задание2Урок1</title>
+	<style>
+		*{margin:0; padding:0;}}
+		body, hStml {width: 100%; height:90%;}
+		.main {max-width: 750px; margin: 5% auto;}
+		form {display: flex; flex-direction: column; justify-content: space-between; align-items: center; height: 100px; margin-top: 15px;}
+
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		let admin = " ";
+		let name = " ";
+		name = "Василий";
+		admin = name;
+		console.log(admin)
+
+		function alertShow(formValue){
+			admin = formValue;
+			console.log(admin);	
+			document.getElementById("formValue").value = "";		
+		}
+	</script>
+	<div class="main">
+		<h3>Задание 2 к уроку №1 курса JavaScript от GeekBrains</h3>
+		<h4>Порядок действий:</h4>
+		<ol>
+			<li class="listItem">Объявляем переменные 'admin' и 'name'</li>
+			<li class="listItem">Записываем в 'name' строку "Василий"</li>
+			<li class="listItem">Копируем значение из 'name' в 'admin'</li>
+			<li class="listItem">Выводим в консоль переменную 'admin'</li>
+		</ol>
+		</br>
+		<img src="lesson2-1.JPG" alt="codeView"/>	
+		</br>
+		<h5> В результате получим</h5>
+		<img src="lesson2-2.JPG" alt="consoleView"/>   
+		</br>
+		<h5>Пожалуйста, введите свое значение для переменной 'name'</h5>
+		<h5>результат будет выведен в консоль</h5>
+		<form onclick=" alertShow(formValue.value) ">
+			<input autofocus type="text" name="name" id="formValue">
+			<input type="button" name="submitBtn" value="Вывести в консоль">
+		</form>
+	</div>	
+</body>
+</html>
