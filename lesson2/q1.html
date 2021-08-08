@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Задание1Урок2</title>
+	<style>
+		*{margin:0; padding:0;}}
+		body, hStml {width: 100%; height:90%;}
+		.main {max-width: 750px; margin: 5% auto;}
+		form {display: flex; flex-direction: column; justify-content: space-between; align-items: center; height: 100px; margin-top: 15px;}
+		header{display: flex; justify-content: space-between;}
+		main{display: flex;}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		let admin = " ";
+		let name = " ";
+		name = "Василий";
+		admin = name;
+		console.log(admin)
+
+		function alertShow(formValue){
+			admin = formValue;
+			console.log(admin);	
+			document.getElementById("formValue").value = "";		
+		}
+	</script>
+	<div class="main">
+		<header>
+			<a href="../homework.html">На главную</a>
+			<h3>Задание 1 к уроку №2 курса JavaScript от GeekBrains</h3>
+			<div> </div>
+		</header>
+		</br>
+		<main>
+			<div>
+				<img src="lesson1-1.JPG" alt="codeView"/>
+			</div>
+			<div style="margin-left: 25px;">
+				<h4>Комментарии:</h4>
+				<ol>
+					<li class="listItem">Объявляем переменные 'a', 'b','c','d', присваиваем 'a' значение 1, переменной 'b' значение 1</li>
+					<li class="listItem">Производим префиксное инкрементальное увеличение переменной 'a',  полученное значение присваиваем переменной 'c'. 'a'=2</li>
+					<li class="listItem">Во втором примере производится постфиксное инкрементальное увеличение переменной 'b', это означает, что сначала возвращается начальное значение переменной 'b' и данное значение (1) присваивается переменной 'd', и только потом производится увеличение переменной 'b' на единицу. 'b'=2</li>
+					<li class="listItem">В примере 3 сначала приозводится префиксное инкрементальное увеличение переменной 'a', переменная 'a'=3, затем производится сложение 2+3  и результат присваивается переменной 'c'. Выводим значение переменной 'c'. 'a'=3, 'c'=5.  </li>
+					<li class+="listItem">В четвертом примере сначала возвращается текущее значение переменной 'b', затем произвдится сложение 2+2, результат присваивается переменной 'd'. Потом только производится увеличение переменной 'b' на единицу.  'b'=3 , 'd'=4  </li>
+				</ol>
+			</div>
+		</main>
+	</div>	
+</body>
+</html>

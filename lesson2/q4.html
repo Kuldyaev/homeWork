@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Задание4Урок2</title>
+	<style>
+		*{margin:0; padding:0;}}
+		body, hStml {width: 100%; height:90%;}
+		.main {max-width: 750px; margin: 5% auto; }
+		header{display: flex; justify-content: space-between;}
+		.context{display: flex;}
+		h4{margin-left: 15px;}
+		.screen{width: 100%;}
+		.screenNumbers{width: 100%; display:flex;}
+		.screenpart{width: 50%; display: flex; flex-direction: column; align-items: center;}
+		.red {color: red}
+		.green {color:  green}
+		.hide {display: none;}
+		.show {display: block;}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		function handleChange1(number1){
+			let num1 = +number1;
+			const num1pole = document.getElementById("showNum1");
+			const num1color = document.getElementById("colorNum1");
+			num1pole.innerHTML = num1;
+			if (num1 < 0){
+				colorNum1.innerHTML = "отрицательное";
+				colorNum1.className = "red";
+			}else{
+				colorNum1.innerHTML = "положительное";
+				colorNum1.className = "green";
+			}
+		}
+		function handleChange2(number2){
+			let num2 =+number2;
+			const num2pole = document.getElementById("showNum2");
+			const num2color = document.getElementById("colorNum2");
+			num2pole.innerHTML = num2;
+			if (num2 < 0){
+				colorNum2.innerHTML = "отрицательное";
+				colorNum2.className = "red";
+			}else{
+				colorNum2.innerHTML = "положительное";
+				colorNum2.className = "green";
+			}
+		}
+
+		function summa(n1, n2){
+			return n1 + n2
+		}
+		function rasnost(n1, n2){
+			return n1 - n2
+		}
+		function proisvedenie(n1, n2){
+			return n1 * n2
+		}
+		function delenie(n1, n2){
+			return n1 / n2
+		}
+
+		function sumNumbers(number1, number2){
+			const resultSpole = document.getElementById("screenResult");
+			resultSpole.className = "show";
+			const resultTitle = document.getElementById("resultsTitle");
+			resultTitle.innerHTML = "Сумма чисел a и b равна:";
+			const resultNumner = document.getElementById("results");
+			resultNumner.innerHTML = summa(+number1, +number2);
+		}
+
+		function rasNumbers(number1, number2){
+			const resultSpole = document.getElementById("screenResult");
+			resultSpole.className = "show";
+			const resultTitle = document.getElementById("resultsTitle");
+			resultTitle.innerHTML = "Разность чисел a и b равна:";
+			const resultNumner = document.getElementById("results");
+			resultNumner.innerHTML = rasnost(+number1, +number2);
+		}
+
+		function proisNumbers(number1, number2){
+			const resultSpole = document.getElementById("screenResult");
+			resultSpole.className = "show";
+			const resultTitle = document.getElementById("resultsTitle");
+			resultTitle.innerHTML = "Произведение чисел a и b равно:";
+			const resultNumner = document.getElementById("results");
+			resultNumner.innerHTML = proisvedenie(+number1, +number2);
+		}
+
+		function delNumbers(number1, number2){
+			if (+number2 === null || +number2 === 0){
+				alert("Делить на ноль нельзя!!!")
+			}else{
+				const resultSpole = document.getElementById("screenResult");
+				resultSpole.className = "show";
+				const resultTitle = document.getElementById("resultsTitle");
+				resultTitle.innerHTML = "Частное от деления чисел a и b равно:";
+				const resultNumner = document.getElementById("results");
+				resultNumner.innerHTML = delenie(+number1, +number2);
+			}
+		}
+
+	</script>
+	<div class="main">
+		<header>
+			<a href="../homework.html">На главную</a>
+			<h3>Задание 4 к уроку №2 курса JavaScript от GeekBrains</h3>
+			<div> </div>
+		</header>
+		</br>
+		<h5>Пожалуйста, введите целые числа в форму ниже:</h5></br> 
+		<form>
+			<input autofocus type="number" name="number1" id="number1" onchange="handleChange1(number1.value)">
+			<input type="number" name="number2" id="number2" onchange="handleChange2(number2.value)">
+			
+		</form>
+		</br></br>
+		<button onclick="sumNumbers(number1.value, number2.value)">Сумма чисел</button>
+		<button onclick="rasNumbers(number1.value, number2.value)">Разность чисел</button>
+		<button onclick="proisNumbers(number1.value, number2.value)">Произведение чисел</button>
+		<button onclick="delNumbers(number1.value, number2.value)">Деление чисел</button>
+
+		</br></br>
+		<section class="screen">
+			<div class="screenNumbers">
+				<div class="screenpart leftPart">
+					<h4>Число a</h4>
+					</br>
+					<h5 id="showNum1">0</h5>
+					</br>
+					<h4 id="colorNum1">положительное</h4>
+				</div>	
+				<div class="screenpart rightPart">
+					<h4>Число b</h4>
+					</br>
+					<h5 id="showNum2">0</h5>
+					</br>
+					<h4 id="colorNum2">положительное</h4>
+				</div>
+			</div>
+			</br></br>
+			<div id="screenResult" class="hide">
+				<h4>Результат вычислений:</h4>
+				</br>
+				<h5 id="resultsTitle"></h5>
+				</br>
+				<h5 id="results"></h5>
+			</div>	
+		</section>
+	</div>	
+</body>
+</html>
