@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Задание1Урок3</title>
+	<style>
+		*{margin:0; padding:0;}}
+		body, hStml {width: 100%; height:90%;}
+		.main {max-width: 750px; margin: 5% auto;}
+		form {display: flex; flex-direction: column; justify-content: space-between; align-items: center; height: 100px; margin-top: 15px;}
+		header{display: flex; justify-content: space-between;}
+		main{display: flex;}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		let num1;
+
+		function handleChange1(number1){
+			if(+number1 > 50 ){
+				alert("Число слишком большое!");
+			}else if(+number1 < 0.5){
+				alert("Число должно быть неотрицательным!")
+			}else{
+				num1 = Math.round(+number1);
+				const num1pole = document.getElementById("showNum1");
+				num1pole.innerHTML = num1;
+			}
+
+			num1 = +number1;
+			const num1pole = document.getElementById("showNum1");
+			num1pole.innerHTML = num1;
+		}
+
+		function starPiramidConsole(starMax){
+			let star = '';
+			for (x=0; x< +starMax+1; x++){
+				if (x === 0){ 
+					console.log("0  - это ноль")
+				}else if(x%2 > 0){
+					console.log(x + "- нечетное число")
+				}else{
+					console.log(x + "- четное число");
+				}
+			} 
+		}
+		function starPiramidPage(starMax){
+			let star = '';
+			const resultPiramidePage = document.getElementById("piramida");
+			const piramidaOldChild = document.getElementById("piramidaChild");
+			const piramidaNewChild = document.createElement('div');
+			piramidaNewChild.id = "piramidaChild";
+
+			for (x=0; x < +starMax+1; x++){
+				if (x === 0){ 
+					star =  "0  - это ноль";
+				}else if(x%2 > 0){
+					star = x + "- нечетное число";
+				}else{
+					star = x + "- четное число";
+				}
+				let p = document.createElement("p");
+				p.innerHTML = star;
+				piramidaNewChild.appendChild(p);
+			} 
+			
+			resultPiramidePage.replaceChild(piramidaNewChild, piramidaOldChild);
+			
+		}
+
+	</script>
+	<div class="main">
+		<header>
+			<a href="../homework.html">На главную</a>
+			<h3>Задание 1 к уроку №3 курса JavaScript от GeekBrains</h3>
+			<div> </div>
+		</header>
+		</br>
+		<main>
+			<div>
+				<h5>Пожалуйста, введите положительное целое число до 50 в форму ниже:</h5></br> 
+				<form>
+					<input autofocus type="number" name="number1" id="number1" onchange="handleChange1(number1.value)">
+				</form>
+				<h4>Число:</h4>
+				</br>
+				<h5 id="showNum1">0</h5>
+				</br>
+				<h5>Вывести сообщения о четности чисел:</h5></br>
+				<button onclick="starPiramidConsole(10)"> 10 в консоль</button>
+				<button onclick="starPiramidConsole(number1.value)">Указанное число в консоль</button>
+				<button onclick="starPiramidPage(10)">10 на страницу</button>
+				<button onclick="starPiramidPage(number1.value)">Указанное число на страницу</button>
+				</br>
+				<div id="piramida" style="margin-left: 15px;">
+					<div id="piramidaChild"></div>
+				</div>
+			</div>
+		</main>
+	</div>	
+</body>
+</html>
