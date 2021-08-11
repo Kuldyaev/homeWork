@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Задание4Урок3</title>
+	<style>
+		*{margin:0; padding:0;}}
+		body, hStml {width: 100%; height:90%;}
+		.main {max-width: 750px; margin: 5% auto;}
+		header{display: flex; justify-content: space-between;}
+		main{display: flex; justify-content: space-between;}
+		img{width: 100%;}
+		.pic{max-width: 99%;}
+
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		const products = [
+			{	id: 3,
+				price: 127,
+				photos: ["1.jpg",
+						"2.jpg"]
+			},
+			{	id: 5,
+				price: 499,
+				photos: []
+			},
+			{	id: 10,
+				price: 26,
+				photos: ["3.jpg"]
+			},
+			{	id: 8,
+				price: 78,
+			},
+		];
+
+		const newProducts = products.filter((item)=>{
+		    if (item.photos!==undefined &&  typeof(item.photos)==='object' && item.photos.length>0) {
+		        return true;
+		    }else {
+		        return false;
+		    }
+		});
+		console.log(newProducts);
+		
+		const filterProducts = products.sort(function (a, b) {
+			  if (a.price > b.price) {
+			    return 1;
+			  }
+			  if (a.price < b.price) {
+			    return -1;
+			  }
+			    return 0;
+			 })
+		console.log(filterProducts);
+
+
+			
+	</script>
+	<div class="main">
+		<header>
+			<a href="../homework.html">На главную</a>
+			<h3>Задание 4 к уроку №3 курса JavaScript от GeekBrains</h3>
+			<div> </div>
+		</header>
+		</br>
+		<main>
+			<div class="pic">
+				<img src="lesson4-1.JPG" alt="codeView1"/>
+			</div>
+			<div class="pic">
+				<img src="lesson4-2.JPG" alt="codeView1"/>
+			</div>
+		</main>
+	</div>	
+</body>
+</html>
