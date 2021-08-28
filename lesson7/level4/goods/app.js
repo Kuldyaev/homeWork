@@ -104,7 +104,6 @@ function showCategory(category) {
 
   
     products[category].forEach(el => {
-        console.log(el);
         let product =  document.createElement('div');
         product.className = "product";
         product.innerHTML = `<div>${el.name}</div>
