@@ -116,7 +116,7 @@ function checkCart() {
 			cartContent.appendChild(newLine);
 		} )
 		let cartItogo = document.createElement('h4');
-		cartItogo.innerHTML = 'Итого:' + itogo + '$';
+		cartItogo.innerHTML = 'Итого:' + itogo.toFixed(2) + '$';
 		cartContent.appendChild(cartItogo);
 	}
 }
