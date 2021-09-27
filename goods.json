@@ -7,5 +7,6 @@
     {"id": 3, "title": "Keyboard", "price": 200, "img": "3.jpg"},
     {"id": 4, "title": "Gamepad", "price": 50, "img": "4.jpg"}
   ],
-  "cart":[{"id": 3, "title": "Keyboard", "price": 200, "img": "3.jpg", "quantity":1}]
+  "cart":[{"id": 3, "title": "Keyboard", "price": 200, "img": "3.jpg", "quantity":1},
+         {"id": 4, "title": "Gamepad", "price": 50, "img": "4.jpg", "quantity":2}]
 }
