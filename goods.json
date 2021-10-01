@@ -6,5 +6,5 @@
     {"id": 2, "title": "Mouse", "price": 20, "img": "2.jpg" },
     {"id": 3, "title": "Keyboard", "price": 200, "img": "3.jpg"},
     {"id": 4, "title": "Gamepad", "price": 50, "img": "4.jpg"},
-  ]
+  ],
 }
