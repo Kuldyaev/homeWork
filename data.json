@@ -1,0 +1,67 @@
+{
+  "what": "data for myweb",
+  "author": "Kuldyaev Viacheslav",
+  "maindata": {
+    "name":{
+      "ru": "Вячеслав",
+      "en": "Viacheslav"
+    },
+    "lastname":{
+      "ru": "Кульдяев",
+      "en": "Kuldyaev"
+    },
+    "email": "slavalion@mail.ru",
+    "navmenu":[
+      {
+        "nicname": "home",
+        "title": {
+          "ru": "Главная",
+          "en": "Home"
+        },
+        "route": "",
+        "status":"simple",
+        "level": 0
+      },
+      {
+        "nicname": "projects",
+        "title": {
+          "ru": "Проекты",
+          "en": "Projects"
+        },
+        "route": "projects",
+        "status":"simple",
+        "level": 0
+      },
+      {
+        "nicname": "photos",
+        "title": {
+          "ru": "Фото",
+          "en": "Photos"
+        },
+        "route": "photos",
+        "status":"simple",
+        "level": 0
+      },
+      {
+        "nicname": "videos",
+        "title": {
+          "ru": "Видео",
+          "en": "Videos"
+        },
+        "route": "videos",
+        "status":"simple",
+        "level": 0
+      },
+      {
+        "nicname": "other",
+        "title": {
+          "ru": "Многое другое",
+          "en": "Other"
+        },
+        "route": "other",
+        "status":"complex",
+        "level": 0
+      }
+    ]  
+  }
+}
