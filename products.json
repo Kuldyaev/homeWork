@@ -1,0 +1,12 @@
+{
+  "quontity": 4,
+  "author": "Kuldyaev Viacheslav",
+  "goods": [
+    {"id": 6, "title": "ELLERY X M'O CAPSULE", "price": 52, "text": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi."},
+    {"id": 7, "title": "ELLERY X M'O CAPSULE", "price": 52, "text": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi."},
+    {"id": 8, "title": "ELLERY X M'O CAPSULE", "price": 52, "text": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi."},
+    {"id": 9, "title": "ELLERY X M'O CAPSULE", "price": 52, "text": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi."},
+    {"id": 10, "title": "ELLERY X M'O CAPSULE", "price": 52, "text": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi."},
+    {"id": 11, "title": "ELLERY X M'O CAPSULE", "price": 52, "text": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi."},
+  ]
+}
